@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/hitblast/cutler/main/assets/logo.png" width="180px">
+<img src="https://raw.githubusercontent.com/cutlercli/cutler/main/assets/logo.png" width="180px">
 
 # The <code>cutler</code> Cookbook
 
@@ -36,8 +36,8 @@ If instead the code blocks have their file paths mentioned on top (for most of t
 
 There are some additional links that you may want to keep tabs on:
 
-- [GitHub](https://github.com/hitblast/cutler)
-- [Website](https://hitblast.github.io/cutler)
+- [GitHub](https://github.com/cutlercli/cutler)
+- [Website](https://cutlercli.github.io)
 - [crates.io](https://crates.io/crates/cutler)
 
 ## Let's Go!

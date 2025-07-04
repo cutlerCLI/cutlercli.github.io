@@ -22,7 +22,7 @@ I would personally recommend using the latest Rust version available. As of now,
 
 ### Cloning the Repository
 
-Once you have ensured the prerequisites, fork the repository [from here](https://github.com/hitblast/cutler/fork) and clone it using the following command:
+Once you have ensured the prerequisites, fork the repository [from here](https://github.com/cutlercli/cutler/fork) and clone it using the following command:
 
 ```bash
 # https
@@ -58,7 +58,7 @@ If you want to manually run this command before pushing, I recommend using [hook
 hookman build
 ```
 
-> The unit tests in the CI workflow are done using an **Apple Silicon M1 (3-core)** runner provided by GitHub Actions. See [this page](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources) in GitHub's documentation for more information on all the runners. If the runners used in this project get outdated and don't get a bump, you may suggest one through [GitHub Issues](https://github.com/hitblast/cutler/issues/new).
+> The unit tests in the CI workflow are done using an **Apple Silicon M1 (3-core)** runner provided by GitHub Actions. See [this page](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources) in GitHub's documentation for more information on all the runners. If the runners used in this project get outdated and don't get a bump, you may suggest one through [GitHub Issues](https://github.com/cutlercli/cutler/issues/new).
 
 ### Build Reproduction
 
@@ -70,7 +70,7 @@ cargo build --release --verbose --locked
 
 The major part of the release automation is currently done with [GitHub Actions]() via the [following workflow](./.github/workflows/release.yml) so, you can have a look at it to view the entire pipeline.
 
-The unit testing is done via [this workflow.](https://github.com/hitblast/cutler/blob/main/.github/workflows/tests.yml)
+The unit testing is done via [this workflow.](https://github.com/cutlercli/cutler/blob/main/.github/workflows/tests.yml)
 
 ### Code Formatting
 
