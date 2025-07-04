@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/cutlercli/cutler/main/assets/logo.png" width="180px">
+<img src="https://raw.githubusercontent.com/cutlercli/cutler/master/assets/logo.png" width="180px">
 
 # The <code>cutler</code> Cookbook
 
