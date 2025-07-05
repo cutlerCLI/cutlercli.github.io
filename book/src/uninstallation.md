@@ -7,7 +7,7 @@ Obviously, cutler is still an experimental software in heavy development, so if 
 Run this command in your terminal:
 
 ```bash
-curl -fsSL https://cutlercli.github.io/scripts/install.sh | /bin/bash
+curl -fsSL https://cutlercli.github.io/scripts/uninstall.sh | /bin/bash
 ```
 
 ## For Package Manager Installs
