@@ -52,12 +52,6 @@ This chain of commands can be used to fully test and build the final product.
 cargo fmt --all -- --check && cargo test --verbose && cargo clippy && cargo build
 ```
 
-If you want to manually run this command before pushing, I recommend using [hookman](https://github.com/hitblast/hookman). I've built it to automate setting up git hooks. Just run this command inside the source directory to set things up:
-
-```bash
-hookman build
-```
-
 > The unit tests in the CI workflow are done using an **Apple Silicon M1 (3-core)** runner provided by GitHub Actions. See [this page](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources) in GitHub's documentation for more information on all the runners. If the runners used in this project get outdated and don't get a bump, you may suggest one through [GitHub Issues](https://github.com/cutlercli/cutler/issues/new).
 
 ### Build Reproduction
