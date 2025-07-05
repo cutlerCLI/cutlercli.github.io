@@ -32,7 +32,7 @@ Installing via Homebrew doesn't require doing this step.
 
 ## Manual Installation
 
-Get the latest [prebuilt compressed binaries](https://github.com/cutlercli/cutler/releases) if you would like to manually install the project.
+Get the latest [prebuilt compressed binaries](https://github.com/cutlerCLI/cutler/releases) if you would like to manually install the project.
 
 Note than on devices running macOS, you'll have to remove the quarantine attribute from the binary:
 
