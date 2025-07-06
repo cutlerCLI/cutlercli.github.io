@@ -212,7 +212,6 @@ a:hover {
     background: rgba(162, 107, 20, 0.08);
     border-radius: 1em;
     padding: 2em;
-    margin-bottom: 1.5em;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -268,7 +267,7 @@ a:hover {
     overflow-x: auto;
     font-size: 0.98em;
 }
-.terminal-content pre {
+.terminal-content pre code {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
 }
