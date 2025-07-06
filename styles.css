@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 body {
     font-family:
         "ui-sans-serif", "-apple-system", "BlinkMacSystemFont",
@@ -25,7 +27,6 @@ h1 {
     text-align: center;
     font-size: 3.6rem;
     margin: 0 0 0.1em;
-    color: #f9d094;
     font-weight: 900;
     line-height: 1.1;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
@@ -34,22 +35,17 @@ h1 {
 .tagline {
     text-align: center;
     font-size: 1.3rem;
-    color: #f9d094;
     margin-bottom: 2.5rem;
 }
 
 .shields-stars {
     margin-top: 15px;
 }
-.shields-general {
-    margin-left: 10px;
-}
 
 h2 {
-    font-size: 2.6rem; /* Increased from 2rem for larger section headers */
+    font-size: 2.6rem;
     font-weight: 800;
     margin-top: 40px;
-    color: #f9d094;
     text-align: center;
     line-height: 1.1;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
@@ -65,7 +61,6 @@ hr {
 h3 {
     font-size: 2rem;
     font-weight: 800;
-    color: #f9d094;
     margin-bottom: 1em;
     line-height: 1.1;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
@@ -88,14 +83,14 @@ code {
     border-radius: 3px;
     font-family:
         "ui-monospace", "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+    background: rgb(31, 29, 26);
+    color: #fff;
 }
 
 pre {
-    background: rgb(32, 29, 26);
+    background: rgb(31, 29, 26);
     padding: 1rem;
     border-radius: 0.4em;
-    -moz-border-radius: 0.4em;
-    -webkit-border-radius: 0.4em;
     overflow-x: auto;
     margin: 0 0 1em 0;
 }
@@ -103,17 +98,20 @@ pre {
 pre code {
     font-family:
         "ui-monospace", "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
-    font-size: 11px; /* Reduced from 13px */
+    font-size: 11px;
     line-height: 1.6;
+    background: none;
+    color: #fff;
 }
 
 pre[class*="language-"] {
-    background: rgb(32, 29, 26);
+    background: rgb(31, 29, 26);
 }
 
 code[class*="language-"] {
     text-shadow: none;
-    color: #f9d094;
+    background: rgb(31, 29, 26);
+    color: #fff;
 }
 
 .code-container {
@@ -130,44 +128,16 @@ code[class*="language-"] {
     opacity: 0.7;
     transition: opacity 0.2s;
     z-index: 10;
+    display: none;
+    color: #ffffff;
+    text-shadow: 0px 0px 40px #0c0c0c;
 }
 .copy-btn:hover {
     opacity: 1;
 }
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: #7c7c7c;
-}
-
-.token.punctuation {
-    color: #c5c8c6;
-}
-
-.token.property,
-.token.keyword,
-.token.tag {
-    color: #96cbfe;
-}
-
-.token.string {
-    color: #9c7645;
-}
-
-.token.operator,
-.token.entity,
-.token.url {
-    color: #ededed;
-}
-
-.token.variable {
-    color: teal;
-}
-
-.token.important {
-    color: #fd971f;
+.code-container:hover .copy-btn,
+.code-container:focus-within .copy-btn {
+    display: block;
 }
 
 .button {
@@ -185,7 +155,7 @@ code[class*="language-"] {
 .button:hover {
     background-color: rgba(162, 107, 20, 0.25);
     color: #f9d094;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .button-container {
@@ -219,4 +189,179 @@ a {
 a:hover {
     color: #d3a459;
     text-decoration: underline;
+}
+
+/* Custom badge style for "Stable", "Fast", "Open Source" */
+.badge {
+    display: inline-block;
+    background: rgba(162, 107, 20, 0.18);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.3em 1.1em;
+    margin: 0 0.2em 0.2em 0;
+    letter-spacing: 0.03em;
+}
+
+.badge i {
+    margin-right: 0.3em;
+}
+
+/* Feature card style */
+.feature-card {
+    background: rgba(162, 107, 20, 0.08);
+    border-radius: 1em;
+    padding: 2em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+    /* transition and hover effects removed to disable hover effect */
+}
+/* .feature-card:hover {
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+                transform: translateY(-3px) scale(1.01);
+            } */
+
+.feature-icon {
+    font-size: 2.1em;
+    margin-bottom: 0.5em;
+    color: #be862d;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+/* macOS-like terminal window */
+.terminal {
+    background: rgb(31, 29, 26);
+    border-radius: 0.5rem;
+    font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+    position: relative;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.13);
+}
+.terminal-header {
+    background: #d1d1d1;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.terminal-dot.red {
+    background: #ff5f56;
+    border: 1px solid #e0443e;
+}
+.terminal-dot.yellow {
+    background: #ffbd2e;
+    border: 1px solid #dea123;
+}
+.terminal-dot.green {
+    background: #27c93f;
+    border: 1px solid #13a10e;
+}
+.terminal-content {
+    padding: 1.2rem 1.5rem;
+    overflow-x: auto;
+    font-size: 0.98em;
+}
+.command {
+    color: #3b82f6;
+    font-weight: bold;
+}
+.comment {
+    color: #7c7c7c;
+    font-style: italic;
+}
+
+/* Responsive grid for features and install */
+.grid {
+    display: grid;
+    gap: 2em;
+}
+@media (min-width: 700px) {
+    .grid.features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid.install {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Utility Classes */
+    .accent {
+        color: #be862d;
+        font-weight: bold;
+    }
+
+    .mb-10 {
+        margin-bottom: 2.5em;
+    }
+
+    .mt-8 {
+        margin-top: 2em;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .col-1 {
+        flex: 1;
+        min-width: 260px;
+    }
+
+    .col-2 {
+        flex: 1;
+        min-width: 260px;
+    }
+}
+@media (max-width: 699px) {
+    .grid.features,
+    .grid.install {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 3.5em;
+}
+
+.text-center {
+    text-align: center;
+}
+.mb-6 {
+    margin-bottom: 1.5em;
+}
+.mb-8 {
+    margin-bottom: 2em;
+}
+.mb-10 {
+    margin-bottom: 2.5em;
+}
+.mb-12 {
+    margin-bottom: 3em;
+}
+.mb-20 {
+    margin-bottom: 5em;
+}
+.mt-8 {
+    margin-top: 2em;
+}
+.max-w-2xl {
+    max-width: 600px;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
