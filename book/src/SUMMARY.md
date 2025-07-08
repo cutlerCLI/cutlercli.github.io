@@ -14,17 +14,24 @@
 - [Homebrew Management](./homebrew.md)
 - [Configuration Management](./config-management.md)
 
+# Misc
+
+- [Global Flags](./global-flags.md)
+- [Uninstallation](./uninstallation.md)
+
 # Backends
 
 - [System Preferences](./backend-preferences.md)
 
+# Versions
+
+- [v1.0.0](./versions/v1.0.0.md)
+
 # Guidelines
 
-- [Uninstallation](./uninstallation.md)
 - [Contributing](./contributing.md)
 
 # References
 
-- [Global Flags](./global-flags.md)
 - [Resources](./resources.md)
 - [License](./license.md)
