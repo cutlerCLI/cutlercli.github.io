@@ -1,15 +1,16 @@
-# Homebrew Management
+# Homebrew Backups
 
-If you're a person who struggles to keep tabs on all the installed formulae or apps using [Homebrew](https://brew.sh), then cutler could be a great choice for you! Make sure your Homebrew installation is accessible from the `$PATH` variable, and then you can back up the necessary formula/cask names into the config file you previously wrote, using this command:
+If you're a person who struggles to keep tabs on all the installed formulae or apps using [Homebrew](https://brew.sh), then cutler could be a great choice for you!
+
+You can back up your formula/cask names into your existng config file (or a new one), using this command:
 
 ```bash
 cutler brew backup
 
 # or, only backup the ones which are not a dependency:
+#
 # cutler brew backup --no-deps
 ```
-
-This eliminates the usage of the notorious `brew bundle` command which creates a separate `Bundlefile` for you to track. Why do so much when all you need is just one, central file?
 
 Now, when you want to install from the file, simply run:
 

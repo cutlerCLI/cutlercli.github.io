@@ -1,4 +1,4 @@
-# Configuration Management
+# Configuration Features
 
 cutler's configuration can be tiny or versatile depending on your needs. But, there are some nifty features built into the software for your convenience.
 

@@ -11,21 +11,19 @@
 # Usage & Configuration
 
 - [System Preferences](./system-preferences.md)
-- [Homebrew Management](./homebrew.md)
-- [Configuration Management](./config-management.md)
+- [Homebrew Backups](./homebrew.md)
+- [External Commands](./external-commands.md)
+- [Updates](./updates.md)
 
-# Misc
+# Misc.
 
+- [Configuration Features](./config-features.md)
 - [Global Flags](./global-flags.md)
 - [Uninstallation](./uninstallation.md)
 
 # Backends
 
 - [System Preferences](./backend-preferences.md)
-
-# Versions
-
-- [v1.0.0](./versions/v1.0.0.md)
 
 # Guidelines
 
