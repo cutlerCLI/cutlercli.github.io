@@ -7,7 +7,7 @@ You can define external commands with simple syntax like this:
 ```toml
 # ~/.config/cutler/config.toml
 
-[commands.greet]
+[command.greet]
 run = "echo Hello World"
 
 # This runs:
@@ -22,7 +22,7 @@ The ideal structure for writing external commands should be like this:
 [vars]
 hostname = "darkstar"
 
-[commands.hostname]
+[command.hostname]
 run = """
 #!/usr/bin/env bash
 scutil --set LocalHostName $hostname
@@ -32,14 +32,14 @@ scutil --set ComputerName $hostname
 sudo = true  # a more "annotated" sudo
 ```
 
-Some people would like to run their commands "before" other commands. But, cutler runs all commands in parallel, which might not be what you want. In that case, you can use the `ensure-first` key to run then in your desired serial. You can apply this to multiple commands.
+Some people would like to run their commands "before" other commands. But, cutler runs all commands in parallel, which might not be what you want. In that case, you can use the `ensure_first` key to run then in your desired serial. You can apply this to multiple commands.
 
 ```toml
 # ~/.config/cutler/config.toml
 
-[commands.dotfiles]
+[command.dotfiles]
 run = "git clone repo && cd repo && stow . -t ~"
-ensure-first = true
+ensure_first = true
 ```
 
 External commands are run whenever you run `cutler apply` by default. However, if you'd like to _only_ run the commands and not apply defaults, run:
