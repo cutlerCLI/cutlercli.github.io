@@ -13,6 +13,7 @@
 - [System Preferences](./system-preferences.md)
 - [Homebrew Backups](./homebrew.md)
 - [External Commands](./external-commands.md)
+- [Remote Sync](./remote-sync.md)
 - [Updates](./updates.md)
 
 # Misc.
