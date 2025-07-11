@@ -201,6 +201,7 @@
 .mdbook-brew code {
     color: #f5f5f5;
     background: #241f18;
+    border-radius: 0.7rem;
 }
 
 .mdbook-brew blockquote blockquote {
@@ -263,9 +264,8 @@
     --search-mark-bg: #be862d;
     --warning-border: #fd971f;
     --color-scheme: dark;
-    --copy-button-filter: brightness(0) saturate(100%) invert(70%) sepia(30%)
-        saturate(600%) hue-rotate(10deg) brightness(85%) contrast(100%);
-    --copy-button-filter-hover: brightness(0) saturate(100%) invert(70%)
-        sepia(30%) saturate(600%) hue-rotate(10deg) brightness(100%)
+    --copy-button-filter: brightness(0) saturate(0%) invert(70%) brightness(85%)
         contrast(100%);
+    --copy-button-filter-hover: brightness(0) saturate(0%) invert(70%)
+        brightness(100%) contrast(100%);
 }
