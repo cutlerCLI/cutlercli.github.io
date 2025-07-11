@@ -16,7 +16,5 @@ But, it can also have other values depending on your setup:
 - `$HOME/.config/cutler.toml`
 - `cutler.toml` in the current directory
 
-It respects your `$XDG_CONFIG_HOME`, so you don't have to worry about path issues.
-
 The next section will describe how you can use this one configuration file to orchestrate between
 or use all of cutler's capabilities.
