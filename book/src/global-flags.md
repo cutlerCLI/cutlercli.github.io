@@ -7,6 +7,7 @@ cutler supports several global flags that can be used with any command:
 - `--dry-run`: Print what would be done, but do not execute any changes.
 - `-y`, `--accept-interactive`: Accept all interactive prompts automatically.
 - `-n`, `--no-restart-services`: Do not restart system services after command execution.
+- `--no-sync`: Do not sync with remote config (if autosync = true).
 
 Example usage:
 

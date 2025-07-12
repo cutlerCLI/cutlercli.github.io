@@ -18,6 +18,8 @@ autosync = true
 
 Here, the `autosync` flag will ensure that the next time you run any command except the [disabled commands](#disabled-commands), it will automatically fetch the config file beforehand from the provided remote.
 
+> **Note:** the `--no-sync` flag can disable the auto-sync behavior for any given command invocation.
+
 Or, you can simply fetch from the config URL written in `[remote]` manually using the `fetch` command:
 
 ```bash
