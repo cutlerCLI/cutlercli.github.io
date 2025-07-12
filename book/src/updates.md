@@ -11,5 +11,5 @@ cutler check-update
 To upgrade cutler, run:
 
 ```bash
-cutler self-update
+sudo cutler self-update
 ```
