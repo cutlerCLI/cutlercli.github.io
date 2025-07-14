@@ -14,7 +14,7 @@ run = "echo Hello World"
 # echo Hello World
 ```
 
-The ideal structure for writing external commands should be like this:
+## Ideal Structure
 
 ```toml
 # ~/.config/cutler/config.toml
@@ -32,6 +32,8 @@ scutil --set ComputerName $hostname
 sudo = true  # a more "annotated" sudo
 ```
 
+## Notable Features
+
 Some people would like to run their commands "before" other commands. But, cutler runs all commands in parallel, which might not be what you want. In that case, you can use the `ensure_first` key to run then in your desired serial. You can apply this to multiple commands.
 
 ```toml
@@ -41,6 +43,16 @@ Some people would like to run their commands "before" other commands. But, cutle
 run = "git clone repo && cd repo && stow . -t ~"
 ensure_first = true
 ```
+
+You may also want to "ensure" certain binaries/programs in `$PATH` before running them. You can do so with the `required` field, like this:
+
+```toml
+[command.dev-env]
+run = "mise install && mise up"
+required = ["mise"]  # won't run if mise is not in $PATH
+```
+
+## Running the Commands
 
 External commands are run whenever you run `cutler apply` by default. However, if you'd like to _only_ run the commands and not apply defaults, run:
 
