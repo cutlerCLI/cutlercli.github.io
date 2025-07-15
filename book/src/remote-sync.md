@@ -43,3 +43,7 @@ Some commands will not respect `autosync = true` and therefore NOT synchronize t
 - `fetch`
 - `self-update`
 - `check-update`
+- `init`
+- `completion`
+- `reset`
+- the `config` group of subcommands
