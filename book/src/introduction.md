@@ -1,9 +1,8 @@
+<br>
 
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/cutlerCLI/cutler/master/assets/logo.png" width="180px">
-
-# The <code>cutler</code> Cookbook
 
 </div>
 
