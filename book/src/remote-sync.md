@@ -30,12 +30,6 @@ In order to disable remote sync behavior while running any command, use the `--n
 cutler status --no-sync
 ```
 
-## Caveats
-
-Important know-hows related to remote sync:
-
-- If, for some reason, the remote config does not have a `[remote]` section, cutler will keep the current `[remote]` from the local config file and merge it into the remote configuration.
-
 ## Disabled Commands
 
 Some commands will not respect `autosync = true` and therefore NOT synchronize the config automatically:
