@@ -14,7 +14,6 @@ But, it can also have other values depending on your setup:
 
 - `$HOME/.config/cutler/config.toml`
 - `$HOME/.config/cutler.toml`
-- `cutler.toml` in the current directory
 
 The next section will describe how you can use this one configuration file to orchestrate between
 or use all of cutler's capabilities.
