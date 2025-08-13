@@ -82,10 +82,10 @@ As you can see, it suggests me to run `cutler apply`. Running the suggested comm
 
 ## Risky Operations
 
-If you would like to write non-existent domains (create them) using cutler, you can run the `apply` command with a particular flag:
+If you would like to write non-existent domains (create them) using cutler, use the `--no-check` flag:
 
 ```bash
-cutler apply --no-checks
+cutler apply --no-check
 ```
 
 This will disable the "Domain does not exist" error which happens when cutler's backend does not recognize a domain.

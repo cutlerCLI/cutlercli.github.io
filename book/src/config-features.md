@@ -36,6 +36,9 @@ To view your cutler configuration without the use of `cat` or any other fancy to
 
 ```bash
 cutler config show
+
+# or view in editor
+cutler config show --editor
 ```
 
 You can also delete it using:

@@ -21,7 +21,7 @@ cutler brew install
 You can also invoke the command's functionalty from within `cutler apply`:
 
 ```bash
-cutler apply --with-brew
+cutler apply --brew
 ```
 
 This will install every formula/cask _alongside_ applying preferences and running external commands.
