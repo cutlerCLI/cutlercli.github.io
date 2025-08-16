@@ -8,9 +8,18 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    background:
+        radial-gradient(
+            ellipse 120% 80% at 60% 10%,
+            #be862d33 0%,
+            #f9d09422 30%,
+            #2e2a24 100%
+        ),
+        linear-gradient(120deg, #2e2a24 60%, #be862d0a 100%);
     background-color: #2e2a24;
     color: #f9d094;
     font-size: 100%;
+    position: relative;
 }
 
 .logo-container {
@@ -29,16 +38,19 @@ h1 {
     margin: 0 0 0.1em;
     font-weight: 900;
     line-height: 1.1;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    text-shadow:
+        1px 1px 10px rgba(0, 0, 0, 0.25),
+        0 0 18px #be862d33;
 }
 
 .tagline {
     text-align: center;
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
+    text-shadow: 0 0 8px #be862d22;
 }
 
-.shields-stars {
+.get-started {
     margin-top: 15px;
 }
 
@@ -48,7 +60,9 @@ h2 {
     margin-top: 40px;
     text-align: center;
     line-height: 1.1;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    text-shadow:
+        1px 1px 10px rgba(0, 0, 0, 0.25),
+        0 0 12px #be862d22;
 }
 
 hr {
@@ -63,7 +77,9 @@ h3 {
     font-weight: 800;
     margin-bottom: 1em;
     line-height: 1.1;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    text-shadow:
+        1px 1px 10px rgba(0, 0, 0, 0.25),
+        0 0 8px #be862d22;
 }
 
 @media (max-width: 600px) {
@@ -93,6 +109,7 @@ pre {
     border-radius: 0.4em;
     overflow-x: auto;
     margin: 0 0 1em 0;
+    box-shadow: 0 10px 24px #0c0c0c50;
 }
 
 pre code {
@@ -243,22 +260,46 @@ code[class*="language-"] {
     display: block;
 }
 
+/* Improved button styles with gradient and lighting from above */
 .button {
     display: inline-block;
-    background-color: rgba(162, 107, 20, 0.3);
-    color: #d3a459;
+    background: linear-gradient(
+        to bottom,
+        #f9d094 0%,
+        #d3a459 40%,
+        #a26b14 100%
+    );
+    color: #6e4c13;
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 1.05rem;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.18);
+    box-shadow:
+        0 2px 8px 0 rgba(0, 0, 0, 0.18),
+        0 -2px 8px 0 rgba(249, 208, 148, 0.18);
+    border: none;
+    transition:
+        background 0.25s,
+        color 0.25s,
+        box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
 }
 
-.button:hover {
-    background-color: rgba(162, 107, 20, 0.25);
-    color: #f9d094;
+.button:hover,
+.button:focus {
+    background: linear-gradient(
+        to bottom,
+        #fff3d6 0%,
+        #f9d094 35%,
+        #be862d 100%
+    );
+    color: #a26b14;
     text-decoration: none;
+    box-shadow:
+        0 4px 16px 0 rgba(0, 0, 0, 0.22),
+        0 -2px 16px 0 rgba(249, 208, 148, 0.28);
 }
 
 .button-container {
@@ -281,12 +322,14 @@ footer {
     text-align: center;
     color: #cccccc;
     font-size: 0.9rem;
+    text-shadow: 0 0 8px #be862d22;
 }
 
 a {
     color: #be862d;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0 0 6px #be862d22;
 }
 
 a:hover {
@@ -294,7 +337,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Custom badge style for "Stable", "Fast", "Open Source" */
 .badge {
     display: inline-block;
     background: rgba(162, 107, 20, 0.18);
@@ -304,6 +346,7 @@ a:hover {
     padding: 0.3em 1.1em;
     margin: 0 0.2em 0.2em 0;
     letter-spacing: 0.03em;
+    box-shadow: 0 0 8px #be862d22;
 }
 
 .badge i {
@@ -324,6 +367,7 @@ a:hover {
     .accent {
         color: #be862d;
         font-weight: bold;
+        text-shadow: 0 0 6px #be862d22;
     }
 
     .mb-10 {
