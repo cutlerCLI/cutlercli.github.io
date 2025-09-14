@@ -14,6 +14,7 @@ body {
     font-size: 100%;
     position: relative;
     /* Remove overflow: hidden to allow scrolling */
+    z-index: 1;
 }
 
 body::before {
@@ -33,6 +34,17 @@ body::before {
     animation:
         bg-fade-in 1.5s ease-out forwards,
         bg-glow 4s ease-in-out infinite alternate;
+}
+
+/* Overlay for scroll-based darkening */
+#bg-darken-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0); /* Initial: fully transparent */
+    transition: background 0.2s;
+    will-change: background;
 }
 
 @keyframes bg-fade-in {
