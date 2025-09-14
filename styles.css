@@ -8,6 +8,19 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    /* Set up the gradient as a pseudo-element for animation */
+    background-color: #2e2a24;
+    color: #f9d094;
+    font-size: 100%;
+    position: relative;
+    /* Remove overflow: hidden to allow scrolling */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     background:
         radial-gradient(
             ellipse 120% 80% at 60% 10%,
@@ -16,10 +29,20 @@ body {
             #2e2a24 100%
         ),
         linear-gradient(120deg, #2e2a24 60%, #be862d0a 100%);
-    background-color: #2e2a24;
-    color: #f9d094;
-    font-size: 100%;
-    position: relative;
+    opacity: 0;
+    animation: bg-fade-in 1.5s ease-out forwards;
+}
+
+@keyframes bg-fade-in {
+    0% {
+        opacity: 0;
+        /* Optional: start with black background */
+        filter: brightness(0);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
 }
 
 .logo-container {
