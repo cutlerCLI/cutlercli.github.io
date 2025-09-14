@@ -45,7 +45,8 @@ h1 {
 
 .tagline {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 2.5rem;
     text-shadow: 0 0 8px #be862d22;
 }
@@ -266,7 +267,8 @@ code[class*="language-"] {
     background: linear-gradient(
         to bottom,
         #f9d094 0%,
-        #d3a459 40%,
+        #e2b86a 30%,
+        #d3a459 60%,
         #a26b14 100%
     );
     color: #6e4c13;
@@ -292,7 +294,8 @@ code[class*="language-"] {
     background: linear-gradient(
         to bottom,
         #fff3d6 0%,
-        #f9d094 35%,
+        #f9d094 25%,
+        #e2b86a 55%,
         #be862d 100%
     );
     color: #a26b14;
