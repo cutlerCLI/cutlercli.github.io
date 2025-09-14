@@ -56,7 +56,6 @@
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
-        <div id="bg-darken-overlay"></div>
         <section id="hero">
             <div class="logo-container">
                 <img src="assets/logo.png" alt="cutler Logo" class="logo" />
@@ -426,18 +425,6 @@
                         cleanup: true,
                     });
                 }
-
-                // Darken background as you scroll
-                const overlay = document.getElementById("bg-darken-overlay");
-                window.addEventListener("scroll", () => {
-                    const scrollY = window.scrollY || window.pageYOffset;
-                    const docHeight =
-                        document.documentElement.scrollHeight -
-                        window.innerHeight;
-                    let progress = docHeight > 0 ? scrollY / docHeight : 0;
-                    progress = Math.max(0, Math.min(1, progress));
-                    overlay.style.background = `rgba(0,0,0,${progress * 0.33})`;
-                });
             });
         </script>
     </body>
