@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     /* Set up the gradient as a pseudo-element for animation */
-    background-color: #2e2a24;
+    background-color: #000000;
     color: #f9d094;
     font-size: 100%;
     position: relative;
@@ -30,7 +30,9 @@ body::before {
         ),
         linear-gradient(120deg, #2e2a24 60%, #be862d0a 100%);
     opacity: 0;
-    animation: bg-fade-in 1.5s ease-out forwards;
+    animation:
+        bg-fade-in 1.5s ease-out forwards,
+        bg-glow 4s ease-in-out infinite alternate;
 }
 
 @keyframes bg-fade-in {
@@ -42,6 +44,18 @@ body::before {
     100% {
         opacity: 1;
         filter: brightness(1);
+    }
+}
+
+@keyframes bg-glow {
+    0% {
+        filter: brightness(1) blur(0px);
+    }
+    50% {
+        filter: brightness(1.15) blur(6px);
+    }
+    100% {
+        filter: brightness(1) blur(0px);
     }
 }
 
