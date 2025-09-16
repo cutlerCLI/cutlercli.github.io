@@ -314,7 +314,7 @@ code[class*="language-"] {
 .terminal-body {
     padding: 1.6em 2em;
     font-size: 1em;
-    color: #f9d094;
+    color: #f0f0f0;
     min-height: 380px;
     white-space: pre-wrap;
     background: transparent;
