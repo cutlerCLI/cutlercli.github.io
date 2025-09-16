@@ -193,7 +193,7 @@ code[class*="language-"] {
     height: 320px;
     z-index: 0;
     pointer-events: none;
-    border-radius: 30px;
+    border-radius: 38px;
     filter: blur(40px);
     opacity: 0.7;
     background: radial-gradient(
@@ -222,8 +222,10 @@ code[class*="language-"] {
 
 .terminal-window {
     background: #181512;
-    border-radius: 10px;
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+    border-radius: 28px;
+    box-shadow:
+        0 4px 32px rgba(0, 0, 0, 0.18),
+        0px 0px 0px 0px #fff;
     width: 650px;
     max-width: 100%;
     height: 380px;
@@ -235,13 +237,54 @@ code[class*="language-"] {
     z-index: 1;
 }
 
+.terminal-window::before,
+.terminal-window::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+.terminal-window::before {
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 110px;
+    border-top-left-radius: 40px;
+    background: radial-gradient(
+        ellipse 80px 60px at 30px 30px,
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.09) 55%,
+        transparent 100%
+    );
+    opacity: 0.55;
+    filter: blur(12px);
+}
+
+.terminal-window::after {
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    border-bottom-right-radius: 40px;
+    background: radial-gradient(
+        ellipse 90px 70px at 90px 90px,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.06) 60%,
+        transparent 100%
+    );
+    opacity: 0.45;
+    filter: blur(14px);
+}
+
 .terminal-header {
     background: #221e18;
-    padding: 0.5em 1em;
+    padding: 0.7em 1.3em;
     display: flex;
     align-items: center;
     gap: 0.5em;
     border-bottom: 1px solid #2e2a24;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
 }
 
 .terminal-header .dot {
@@ -269,13 +312,14 @@ code[class*="language-"] {
 }
 
 .terminal-body {
-    padding: 1.2em 1.5em;
+    padding: 1.6em 2em;
     font-size: 1em;
     color: #f9d094;
     min-height: 380px;
     white-space: pre-wrap;
     background: transparent;
 }
+
 /* copy button */
 .copy-btn {
     position: absolute;
