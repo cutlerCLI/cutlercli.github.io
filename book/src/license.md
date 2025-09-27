@@ -1,3 +1,3 @@
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/cutlerCLI/cutler/blob/master/LICENSE.md) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](https://github.com/cutlerCLI/cutler/blob/master/LICENSE.md) file for details.
