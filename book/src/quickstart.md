@@ -18,8 +18,6 @@ be set anywhere within these locations:
 - `$XDG_CONFIG_HOME/cutler/config.toml`
 - `$XDG_CONFIG_HOME/cutler.toml`
 
-## How everything is arranged
-
 cutler uses TOML "tables" to put everything together it does; from setting up system
 preferences to running commands and more. So, the config file you just created will be the
 center point of usage.
