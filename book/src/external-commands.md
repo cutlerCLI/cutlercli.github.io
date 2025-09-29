@@ -14,7 +14,9 @@ run = "echo Hello World"
 # echo Hello World
 ```
 
-## Ideal Structure
+## Variables
+
+You can store localized variables (not available to the shell environment) inside cutler for your commands as such:
 
 ```toml
 # ~/.config/cutler/config.toml
@@ -32,7 +34,7 @@ scutil --set ComputerName $hostname
 sudo = true  # a more "annotated" sudo
 ```
 
-## Notable Features
+## Ensuring Command Execution First
 
 Some people would like to run their commands "before" other commands. But, cutler runs all commands in parallel, which might not be what you want. In that case, you can use the `ensure_first` key to run then in your desired serial. You can apply this to multiple commands.
 
@@ -44,7 +46,9 @@ run = "git clone repo && cd repo && stow . -t ~"
 ensure_first = true
 ```
 
-You may also want to "ensure" certain binaries/programs in `$PATH` before running them. You can do so with the `required` field, like this:
+## Ensuring Binaries
+
+You may want to ensure that certain binaries/programs are available in `$PATH` before running an external command. You can do so with the `required` field, like this:
 
 ```toml
 [command.dev-env]
@@ -52,7 +56,7 @@ run = "mise install && mise up"
 required = ["mise"]  # won't run if mise is not in $PATH
 ```
 
-## Running the Commands
+## Running
 
 External commands are run whenever you run `cutler apply` by default. However, if you'd like to _only_ run the commands and not apply defaults, run:
 
@@ -64,4 +68,28 @@ You can also run a specific external command by attaching a name parameter:
 
 ```bash
 $ cutler exec hostname  # this runs the hostname command
+```
+
+## Flagging Commands
+
+You can flag certain commands to only run when a particular flag is passed through either `apply` or `exec`. Say, if you want to flag a Hello World command:
+
+```toml
+[command.greet]
+run = "echo 'Hello World'"
+flag = true
+```
+
+Now that this command is flagged, it will only run if you pass the `--all-exec` or `--flagged` flag with `cutler apply`:
+
+```
+$ cutler apply --all-exec  # or -a, for all commands
+$ cutler apply --flagged  # or -f, when you only want to run flagged commands
+```
+
+An identical approach can be used for `cutler exec`:
+
+```
+$ cutler exec --all  # or -a
+$ cutler exec --flagged  # or -f
 ```
