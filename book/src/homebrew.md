@@ -4,7 +4,7 @@ If you're a person who struggles to keep tabs on all the installed formulae or a
 
 You can back up your formula/cask names into your existng config file (or a new one), using this command:
 
-```bash
+```sh
 cutler brew backup
 
 # or, only backup the ones which are not a dependency:
@@ -14,13 +14,13 @@ cutler brew backup
 
 Now, when you want to install from the file, simply run:
 
-```bash
+```sh
 cutler brew install
 ```
 
 You can also invoke the command's functionalty from within `cutler apply`:
 
-```bash
+```sh
 cutler apply --brew
 ```
 
@@ -50,6 +50,6 @@ the preincluded utility in macOS. By default, cutler will try to ensure that it 
 
 If you want to manually install it, you can do so by running:
 
-```bash
+```sh
 xcode-select --install
 ```

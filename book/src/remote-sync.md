@@ -2,7 +2,7 @@
 
 cutler features a simple built-in remote sync logic. For example, if you want to apply a config from a given URL without placing it manually on your machine, simply use the following command:
 
-```bash
+```sh
 cutler apply --url https://example.com/config.toml
 ```
 
@@ -20,13 +20,13 @@ Here, the `autosync` flag will ensure that the next time you run any command exc
 
 Or, you can simply fetch from the config URL written in `[remote]` manually using the `fetch` command:
 
-```bash
+```sh
 cutler fetch
 ```
 
 In order to disable remote sync behavior while running any command, use the `--no-sync` global flag:
 
-```bash
+```sh
 cutler status --no-sync
 ```
 

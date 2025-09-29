@@ -5,7 +5,7 @@ To easily get started, simply type the following command to generate a sample co
 Most commands support a set of global flags that affect output and behavior.
 See [Global Flags](./global-flags.md) for details.
 
-```bash
+```sh
 cutler init
 ```
 

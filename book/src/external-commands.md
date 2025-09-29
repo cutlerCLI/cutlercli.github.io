@@ -60,13 +60,13 @@ required = ["mise"]  # won't run if mise is not in $PATH
 
 External commands are run whenever you run `cutler apply` by default. However, if you'd like to _only_ run the commands and not apply defaults, run:
 
-```bash
+```sh
 cutler exec
 ```
 
 You can also run a specific external command by attaching a name parameter:
 
-```bash
+```sh
 $ cutler exec hostname  # this runs the hostname command
 ```
 
@@ -82,14 +82,14 @@ flag = true
 
 Now that this command is flagged, it will only run if you pass the `--all-exec` or `--flagged` flag with `cutler apply`:
 
-```bash
+```sh
 $ cutler apply --all-exec  # or -a, for all commands
 $ cutler apply --flagged  # or -f, when you only want to run flagged commands
 ```
 
 An identical approach can be used for `cutler exec`:
 
-```bash
+```sh
 $ cutler exec --all  # or -a
 $ cutler exec --flagged  # or -f
 ```

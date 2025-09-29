@@ -24,7 +24,7 @@ I would personally recommend using the latest Rust version available. As of now,
 
 Once you have ensured the prerequisites, fork the repository [from here](https://github.com/cutlerCLI/cutler/fork) and clone it using the following command:
 
-```bash
+```sh
 # https
 $ git clone https://github.com/<your_username>/cutler.git
 
@@ -47,7 +47,7 @@ This chain of commands can be used to fully test and build the final product.
 
 ### Testing
 
-```bash
+```sh
 # raw command
 cargo fmt --all -- --check && cargo test --verbose && cargo clippy && cargo build
 ```
@@ -58,7 +58,7 @@ cargo fmt --all -- --check && cargo test --verbose && cargo clippy && cargo buil
 
 You can easily create a release build for cutler using the following command:
 
-```bash
+```sh
 cargo build --release --verbose --locked
 ```
 
@@ -72,7 +72,7 @@ The unit testing is done via [this workflow.](https://github.com/cutlerCLI/cutle
 
 Simply run the following command to format the code:
 
-```bash
+```sh
 cargo fmt --all
 ```
 

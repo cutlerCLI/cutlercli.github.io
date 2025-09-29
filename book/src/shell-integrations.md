@@ -12,20 +12,20 @@ cutler supports built-in shell completion for your ease of access for a variety 
 
 1. Make a directory to store Bash-specific completions:
 
-```bash
+```sh
 mkdir ~/.bash-completion.d/
 ```
 
 2. Generate the completion script using the following command and pipe the output to a new file:
 
-```bash
+```sh
 cutler completion bash > cutler.bash
 mv cutler.bash ~/.bash-completion.d/
 ```
 
 3. Finally, source the completion script. The best way would be to simply add it to your `.bashrc` file:
 
-```bash
+```sh
 source ~/.bash_completion.d/cutler.bash > ~/.bashrc
 ```
 
@@ -33,20 +33,20 @@ source ~/.bash_completion.d/cutler.bash > ~/.bashrc
 
 1. Make sure you have a directory for custom completions:
 
-```bash
+```sh
 mkdir -p ~/.zfunc
 ```
 
 2. Then, generate the completion script and move it over:
 
-```bash
+```sh
 cutler completion zsh > _cutler
 mv _cutler ~/.zfunc/
 ```
 
 3. Then, add to your `~/.zshrc`:
 
-```bash
+```sh
 # ~/.zshrc
 
 fpath=(~/.zfunc $fpath)
@@ -55,13 +55,13 @@ autoload -U compinit && compinit
 
 4. Restart your shell or run:
 
-```bash
+```sh
 source ~/.zshrc
 ```
 
 ### Other Shells
 
-```bash
+```sh
 # Fish
 $ cutler completion fish
 

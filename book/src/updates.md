@@ -4,12 +4,12 @@
 
 To check for updates, run:
 
-```bash
+```sh
 cutler check-update
 ```
 
 To upgrade cutler, run:
 
-```bash
+```sh
 sudo cutler self-update
 ```

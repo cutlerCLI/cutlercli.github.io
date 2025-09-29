@@ -11,7 +11,7 @@ cutler supports several global flags that can be used with any command:
 
 Example usage:
 
-```bash
+```sh
 cutler apply --quiet
 ```
 

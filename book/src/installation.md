@@ -2,7 +2,7 @@
 
 You can install cutler by directly running this command in the terminal:
 
-```bash
+```sh
 curl -fsSL https://cutlercli.github.io/scripts/install.sh | /bin/bash
 ```
 
@@ -10,19 +10,19 @@ Other installation methods are:
 
 1. Using 🍺 Homebrew:
 
-```bash
+```sh
 brew install hitblast/tap/cutler
 ```
 
 2. Using `cargo`:
 
-```bash
+```sh
 cargo install cutler
 ```
 
 3. Using `mise`:
 
-```bash
+```sh
 # NOTE: This will compile the binary manually for your system.
 mise use -g cargo:cutler
 ```
@@ -36,7 +36,7 @@ Get the latest [prebuilt compressed binaries](https://github.com/cutlerCLI/cutle
 
 Note than on devices running macOS, you'll have to remove the quarantine attribute from the binary:
 
-```bash
+```sh
 # inside extracted zip
 xattr -d com.apple.quarantine bin/cutler
 ```

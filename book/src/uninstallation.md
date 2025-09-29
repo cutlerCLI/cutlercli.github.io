@@ -6,7 +6,7 @@ Obviously, cutler is still an experimental software in heavy development, so if 
 
 Run this command in your terminal:
 
-```bash
+```sh
 curl -fsSL https://cutlercli.github.io/scripts/uninstall.sh | /bin/bash
 ```
 
@@ -16,20 +16,20 @@ If you have installed cutler through a package manager, please follow the instru
 
 1. For Homebrew:
 
-```bash
+```sh
 brew uninstall cutler
 brew untap hitblast/tap  # if you had only installed cutler from the tap
 ```
 
 2. For `cargo`:
 
-```bash
+```sh
 cargo uninstall cutler
 ```
 
 3. For `mise`:
 
-```bash
+```sh
 mise unuse -g cargo:cutler
 
 # when prompted,

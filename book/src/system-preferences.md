@@ -16,7 +16,7 @@ macOS heavily relies on preference files (in `.plist` format) stored in certain 
 
 Ideally, the block above would look something like this if you were to manually call the `defaults` CLI tool which is used to modify these values on macOS:
 
-```bash
+```sh
 $ defaults write com.apple.dock "tilesize" -int "46"
 $ defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool true
 ```
@@ -39,14 +39,14 @@ ApplePressAndHoldEnabled = true
 
 Again, if you were to use `defaults`, it would look something like this:
 
-```bash
+```sh
 $ defaults write NSGlobalDomain "ApplePressAndHoldEnabled" -bool true
 $ defaults write NSGlobalDomain com.apple.mouse.linear -bool true
 ```
 
 Once you're ready, run this command to apply everything:
 
-```bash
+```sh
 cutler apply
 ```
 
@@ -54,13 +54,13 @@ The `apply` command has multiple functionalities which happen alongside of apply
 
 cutler also takes the changes into account and tracks them. To see your status, run:
 
-```bash
+```sh
 cutler status
 ```
 
 Unapplying everything is also as easy. Run the command below and cutler will restore your preferences to the exact previous state:
 
-```bash
+```sh
 cutler unapply
 ```
 
@@ -70,7 +70,7 @@ The fun part about using cutler is, it will mostly tell you to take certain acti
 
 Say, for example, if my Dock should be at the `right` based on cutler's configuration, and `bottom` is its actual value right now, cutler will show this when running `cutler status`:
 
-```bash
+```sh
 $ cutler status
 [WARNING] com.apple.dock | orientation: should be right (currently bottom)
 [WARNING] Run `cutler apply` to apply these changes from your config.
@@ -84,7 +84,7 @@ As you can see, it suggests me to run `cutler apply`. Running the suggested comm
 
 If you would like to write non-existent domains (create them) using cutler, use the `--no-check` flag:
 
-```bash
+```sh
 cutler apply --no-check
 ```
 

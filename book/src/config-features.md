@@ -15,7 +15,7 @@ lock = true
 
 Unless you remove it, this will happen:
 
-```bash
+```sh
 $ cutler apply
 [ERROR] The config file is locked. Run `cutler config unlock` to unlock.
 ```
@@ -24,7 +24,7 @@ You can use this feature to mark configurations as potentially unsafe to apply. 
 
 There are two commands to manage the lock status:
 
-```bash
+```sh
 $ cutler config lock
 # or
 $ cutler config unlock
@@ -34,7 +34,7 @@ $ cutler config unlock
 
 To view your cutler configuration without the use of `cat` or any other fancy tools, use:
 
-```bash
+```sh
 cutler config show
 
 # or view in editor
@@ -43,6 +43,6 @@ cutler config show --editor
 
 You can also delete it using:
 
-```bash
+```sh
 cutler config delete
 ```
