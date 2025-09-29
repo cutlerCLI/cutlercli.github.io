@@ -82,14 +82,14 @@ flag = true
 
 Now that this command is flagged, it will only run if you pass the `--all-exec` or `--flagged` flag with `cutler apply`:
 
-```
+```bash
 $ cutler apply --all-exec  # or -a, for all commands
 $ cutler apply --flagged  # or -f, when you only want to run flagged commands
 ```
 
 An identical approach can be used for `cutler exec`:
 
-```
+```bash
 $ cutler exec --all  # or -a
 $ cutler exec --flagged  # or -f
 ```
