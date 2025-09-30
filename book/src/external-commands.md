@@ -34,7 +34,7 @@ scutil --set ComputerName $hostname
 sudo = true  # a more "annotated" sudo
 ```
 
-## Ensuring Command Execution First
+## Prioritizing Commands
 
 Some people would like to run their commands "before" other commands. But, cutler runs all commands in parallel, which might not be what you want. In that case, you can use the `ensure_first` key to run then in your desired serial. You can apply this to multiple commands.
 
