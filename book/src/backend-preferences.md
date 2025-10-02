@@ -1,22 +1,15 @@
-# Backend for Preferences
+# System Preferences Backend
 
-In cutler's earlier versions, it used to wrap around the `defaults` CLI using asynchronous command invocations. However, this had a counterpart of being slow and extensive in terms of I/O and shell command execution.
+<img width="150px" src="https://github.com/hitblast/defaults-rs/raw/master/assets/logo.png">
 
-<div align="center">
-<img width="200px" src="https://github.com/hitblast/defaults-rs/raw/master/assets/logo.png">
-</div>
+## defaults-rs
 
-cutler's latest versions include <a href="https://github.com/hitblast/defaults-rs">defaults-rs</a>, a frontend for macOS preferences which has been directly written for interop with cutler. Instead of command invocation, it parses the preferences and can also modify them in batches, all the while minimizing the amount of I/O per call.
+In order to automate the process for setting up System Preferences, instead of relying on the `defaults` command, cutler uses
+the [defaults-rs](https://github.com/hitblast/defaults-rs) crate.
 
-It has a neat little Rust API which is also asynchronous.
+It communicates with the preferences daemon through the CoreFoundation API bindings in Rust. This is primarily known as the `cfprefsd` process inside macOS, which is used for setting, storing and caching preference and/or default key-value pairs.
 
-This gives some visible benefits:
-
-1. Instead of lag between commands, now you get instantaneous modifications to your settings (use `cutler apply -v` to feel the speed).
-
-2. Granular control over what gets modified and what doesn't.
-
-3. The community gets to modify and upgrade the backend.
+You can view the source of the backend through the given links below. Consider contributing to make it even better for everyone!
 
 ## Project Links
 
