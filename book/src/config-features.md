@@ -1,6 +1,6 @@
 # Configuration Features
 
-cutler's configuration can be tiny or versatile depending on your needs. But, there are some nifty features built into the software for your convenience.
+There are some nifty features built into the software for your convenience. These configuration features have been documented below so that you can have a quick look:
 
 ## Config-Locking
 
@@ -17,17 +17,22 @@ Unless you remove it, this will happen:
 
 ```sh
 $ cutler apply
-[ERROR] The config file is locked. Run `cutler config unlock` to unlock.
+ERR   The config file is locked. Run `cutler config unlock` to unlock.
+$
 ```
 
 You can use this feature to mark configurations as potentially unsafe to apply. cutler uses it to generate new configuration files for you so that you don't accidentally apply the sample.
 
-There are two commands to manage the lock status:
+From your terminal, it's also as easy to lock:
 
 ```sh
-$ cutler config lock
-# or
-$ cutler config unlock
+cutler config lock
+```
+
+and, to unlock:
+
+```sh
+cutler config unlock
 ```
 
 ## View or Delete

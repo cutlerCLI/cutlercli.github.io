@@ -10,7 +10,7 @@
 
 # Usage & Configuration
 
-- [System Preferences](./system-preferences.md)
+- [Basics & System Settings](./system-settings.md)
 - [Homebrew Backups](./homebrew.md)
 - [External Commands](./external-commands.md)
 - [Remote Sync](./remote-sync.md)

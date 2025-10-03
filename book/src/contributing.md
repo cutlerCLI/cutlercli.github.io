@@ -18,7 +18,7 @@ The prerequisites are as follows:
 - [Rust](https://www.rust-lang.org/tools/install) (`cutler` is configured to use the 2024 edition of the language)
 - A Mac (preferably with [Apple Silicon](https://support.apple.com/en-us/HT211814)) for rapid development
 
-I would personally recommend using the latest Rust version available. As of now, I'm using Rust **v1.88** as my version.
+I would personally recommend using the latest Rust version available. As of now, I'm using Rust **v1.90** as my version.
 
 ### Cloning the Repository
 
@@ -26,13 +26,13 @@ Once you have ensured the prerequisites, fork the repository [from here](https:/
 
 ```sh
 # https
-$ git clone https://github.com/<your_username>/cutler.git
+$ git clone https://github.com/<username>/cutler.git
 
 # ssh
-$ git clone git@github.com:<your_username>/cutler.git
+$ git clone git@github.com:<username>/cutler.git
 ```
 
-Replace `<your_username>` with your GitHub username.
+Replace `<username>` with your GitHub username.
 
 ### Preparing the Environment
 
@@ -70,8 +70,6 @@ The unit testing is done via [this workflow.](https://github.com/cutlerCLI/cutle
 
 `cutler` uses basic Rust formatting for code reliability and maintainability. This ensures that the codebase remains clean, readable, and consistent across different contributors.
 
-Simply run the following command to format the code:
-
 ```sh
 cargo fmt --all
 ```
@@ -89,7 +87,7 @@ Before submitting a pull request, please ensure the following:
 Pull requests and issues must have the following pattern:
 
 ```
-(<type>) <title>
+<type>: <title>
 ```
 
 Possible types include:
@@ -100,4 +98,8 @@ Possible types include:
 - style: Code style or formatting change
 - refactor: Code refactoring without changing functionality
 - test: Test-related changes
-- chore: Maintenance or administrative tasks
+- chore: Maintenance or boring tasks
+
+## Licensing
+
+The primary repository and source code ([cutlerCLI/cutler](https://github.com/cutlerCLI/cutler)) is licensed under the [Apache-2.0](https://github.com/cutlerCLI/cutler/blob/master/LICENSE.md) license.
