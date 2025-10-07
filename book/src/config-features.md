@@ -17,7 +17,7 @@ Unless you remove it, this will happen:
 
 ```sh
 $ cutler apply
-ERR   The config file is locked. Run `cutler config unlock` to unlock.
+ERR   The config file is locked. Run `cutler unlock` to unlock.
 $
 ```
 
@@ -26,28 +26,11 @@ You can use this feature to mark configurations as potentially unsafe to apply. 
 From your terminal, it's also as easy to lock:
 
 ```sh
-cutler config lock
+cutler lock
 ```
 
 and, to unlock:
 
 ```sh
-cutler config unlock
-```
-
-## View or Delete
-
-To view your cutler configuration without the use of `cat` or any other fancy tools, use:
-
-```sh
-cutler config show
-
-# or view in editor
-cutler config show --editor
-```
-
-You can also delete it using:
-
-```sh
-cutler config delete
+cutler unlock
 ```

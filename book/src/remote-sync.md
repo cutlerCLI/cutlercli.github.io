@@ -35,9 +35,11 @@ cutler status --no-sync
 Some commands will not respect `autosync = true` and therefore NOT synchronize the config automatically:
 
 - `fetch`
+- `brew backup`
 - `self-update`
 - `check-update`
-- `init`
+- `cookbook`
 - `completion`
+- `init`
 - `reset`
-- the `config` group of subcommands
+- `config`

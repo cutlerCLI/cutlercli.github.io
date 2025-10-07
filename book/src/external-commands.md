@@ -87,9 +87,10 @@ $ cutler apply --all-exec  # or -a, for all commands
 $ cutler apply --flagged  # or -f, when you only want to run flagged commands
 ```
 
-An identical approach can be used for `cutler exec`:
+An identical approach can be used for `cutler exec`, however, for this command, the external commands will be executed in `All` mode,
+which means you can either choose to run regular commands only, or flagged commands.
 
 ```sh
-$ cutler exec --all  # or -a
+$ cutler exec --regular  # or -r
 $ cutler exec --flagged  # or -f
 ```
