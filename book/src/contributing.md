@@ -4,14 +4,12 @@ This is the standard contribution/development guidelines for the project. You ma
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-- [Production Release Workflow](#production-release-workflow)
+- [Requirements](#requirements)
+- [Production Workflow](#production-workflow)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [License](#licensing)
 
-## Getting Started
-
-The commonplace of contributing is to first clone the repository and install the dependencies.
+## Requirements
 
 The prerequisites are as follows:
 
@@ -34,23 +32,19 @@ $ git clone git@github.com:<username>/cutler.git
 
 Replace `<username>` with your GitHub username.
 
-### Preparing the Environment
+### Required Rust Components
 
-Working on this project will require a few Rust components beforehand:
+Make sure your environment has these tools (NOTE: This list can change based on what currently suits the project).
 
 - [clippy](https://github.com/rust-lang/rust-clippy)
 - [rustfmt](https://github.com/rust-lang/rustfmt)
 
-## Production Release Workflow
+## Production Workflow
 
-This chain of commands can be used to fully test and build the final product.
+CI/CD for cutler is done using [GitHub Actions](https://docs.github.com/en/actions). You may find these workflows useful to look at:
 
-### Testing
-
-```sh
-# raw command
-cargo fmt --all -- --check && cargo test --verbose && cargo clippy && cargo build
-```
+- Release: [.github/workflows/release.yml](https://github.com/cutlerCLI/cutler/blob/master/.github/workflows/release.yml)
+- Unit tests: [.github/workflows/tests.yml](https://github.com/cutlerCLI/cutler/blob/master/.github/workflows/tests.yml)
 
 > The unit tests in the CI workflow are done using an **Apple Silicon M1 (3-core)** runner provided by GitHub Actions. See [this page](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources) in GitHub's documentation for more information on all the runners. If the runners used in this project get outdated and don't get a bump, you may suggest one through [GitHub Issues](https://github.com/cutlerCLI/cutler/issues/new).
 
@@ -59,7 +53,7 @@ cargo fmt --all -- --check && cargo test --verbose && cargo clippy && cargo buil
 You can easily create a release build for cutler using the following command:
 
 ```sh
-cargo build --release --verbose --locked
+cargo build --release --locked
 ```
 
 The major part of the release automation is currently done with [GitHub Actions]() via the [following workflow](./.github/workflows/release.yml) so, you can have a look at it to view the entire pipeline.
@@ -68,10 +62,14 @@ The unit testing is done via [this workflow.](https://github.com/cutlerCLI/cutle
 
 ### Code Formatting
 
-`cutler` uses basic Rust formatting for code reliability and maintainability. This ensures that the codebase remains clean, readable, and consistent across different contributors.
+The project uses core Rust tools to format and prettify the codebase:
 
 ```sh
+# For global formatting
 cargo fmt --all
+
+# For code quality
+cargo clippy --fix
 ```
 
 ## Pull Request Guidelines
