@@ -31,9 +31,7 @@ body::before {
         ),
         linear-gradient(120deg, #2e2a24 60%, #be862d0a 100%);
     opacity: 0;
-    animation:
-        bg-fade-in 1.5s ease-out forwards,
-        bg-glow 4s ease-in-out infinite alternate;
+    animation: bg-fade-in 1.5s ease-out forwards;
 }
 
 @keyframes bg-fade-in {
@@ -45,18 +43,6 @@ body::before {
     100% {
         opacity: 1;
         filter: brightness(1);
-    }
-}
-
-@keyframes bg-glow {
-    0% {
-        filter: brightness(1) blur(0px);
-    }
-    50% {
-        filter: brightness(1.15) blur(6px);
-    }
-    100% {
-        filter: brightness(1) blur(0px);
     }
 }
 
@@ -78,27 +64,7 @@ h1 {
     line-height: 1.1;
     text-shadow:
         1px 1px 10px rgba(0, 0, 0, 0.25),
-        0 0 18px #be862d33,
-        0 0 32px #f9d09488,
-        0 0 64px #be862d55;
-    animation: h1-glow 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes h1-glow {
-    0% {
-        text-shadow:
-            1px 1px 10px rgba(0, 0, 0, 0.25),
-            0 0 18px #be862d33,
-            0 0 32px #f9d09444,
-            0 0 64px #be862d22;
-    }
-    100% {
-        text-shadow:
-            1px 1px 10px rgba(0, 0, 0, 0.25),
-            0 0 28px #be862d66,
-            0 0 48px #f9d094cc,
-            0 0 96px #be862d88;
-    }
+        0 0 18px #be862d33;
 }
 
 .tagline {

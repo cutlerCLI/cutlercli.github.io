@@ -1,6 +1,7 @@
-[tools]
-"cargo:mdbook" = "latest"
 
 [tasks.serve]
 description = "Serves the book locally"
 run = "mdbook serve --open"
+
+[tools]
+mdbook = "latest"
