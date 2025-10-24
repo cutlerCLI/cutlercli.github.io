@@ -6,10 +6,10 @@
 
 - [Installation](./installation.md)
 - [Shell Integrations](./shell-integrations.md)
-- [Quick Start](./quickstart.md)
 
 # Usage & Configuration
 
+- [Quick Init](./quick-init.md)
 - [Basics & System Settings](./system-settings.md)
 - [Homebrew Backups](./homebrew.md)
 - [External Commands](./external-commands.md)

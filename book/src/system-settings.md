@@ -1,8 +1,8 @@
 # Basics & System Settings
 
-## Configuration Syntax
+## Syntax
 
-cutler can do a number of things if you use it right. Here's a basic example of a TOML configuration for cutler:
+Here is a basic example of a cutler configuration file:
 
 ```toml
 # ~/.config/cutler/config.toml
@@ -16,12 +16,21 @@ FlashDateSeparators = true
 
 macOS heavily relies on preference files (in `.plist` format) stored in certain ways to save the state of your Mac's apps and settings. cutler takes advantage of this mechanism to automatically put your desired system settings in place by following the config file you wrote. It's a "declarative" way to set your settings without even touching the app itself.
 
-Ideally, the block above would look something like this if you were to manually call the `defaults` CLI tool which is used to modify these values on macOS:
+This will do the following:
+
+1. Set your **Dock's tilesize** to **46**.
+2. Enable **flashing date separators** for the clock of your **menu bar**.
+
+
+If you were to do the same with a terminal, you would use these commands:
 
 ```sh
 $ defaults write com.apple.dock "tilesize" -int "46"
 $ defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool true
 ```
+
+
+## Global Preferences
 
 You can also configure global preferences like this:
 
