@@ -2,35 +2,35 @@
 
 [Introduction](./introduction.md)
 
-# Getting Started
+# Installation
 
-- [Installation](./installation.md)
-- [Shell Integrations](./shell-integrations.md)
+- [Installation Methods](./installation/installation-methods.md)
+- [Shell Integration](./installation/shell-integration.md)
 
-# Usage & Configuration
+# Usage
 
-- [Quick Init](./quick-init.md)
-- [Basics & System Settings](./system-settings.md)
-- [Homebrew Backups](./homebrew.md)
-- [External Commands](./external-commands.md)
-- [Remote Sync](./remote-sync.md)
-- [Updates](./updates.md)
+- [Quickstart](./usage/quickstart.md)
+- [Basics & System Settings](./usage/basics-and-system-settings.md)
+- [Homebrew Backups](./usage/homebrew-backups.md)
+- [External Commands](./usage/external-commands.md)
+- [Remote Sync](./usage/remote-sync.md)
+- [Updates](./usage/updates.md)
 
 # Misc.
 
-- [Configuration Features](./config-features.md)
-- [Global Flags](./global-flags.md)
-- [Uninstallation](./uninstallation.md)
+- [Configuration Features](./misc/config-features.md)
+- [Global Flags](./misc/global-flags.md)
+- [Uninstallation](./misc/uninstallation.md)
 
 # Backends
 
-- [System Preferences](./backend-preferences.md)
+- [System Preferences](./backends/system-preferences.md)
 
 # Guidelines
 
-- [Contributing](./contributing.md)
+- [Contributing](./guidelines/contributing.md)
 
 # References
 
-- [Resources](./resources.md)
-- [License](./license.md)
+- [Resources](./references/resources.md)
+- [License](./references/license.md)

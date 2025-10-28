@@ -1,4 +1,4 @@
-# Quick Init
+# Quickstart
 
 To easily get started, simply type the following command to generate a sample configuration:
 
@@ -24,4 +24,4 @@ be set anywhere within these locations:
 
 ## How to write a config?
 
-Learn about this in the next section: [Basics & System Settings](./system-settings.md)
+Learn about this in the next section: [Basics & System Settings](./basics-and-system-settings.md)

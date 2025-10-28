@@ -51,7 +51,7 @@ ensure_first = true
 You may want to ensure that certain binaries/programs are available in `$PATH` before running an external command. You can do so with the `required` field, like this:
 
 ```toml
-[command.dev-env]
+[command.development-tools]
 run = "mise install && mise up"
 required = ["mise"]  # won't run if mise is not in $PATH
 ```
@@ -70,7 +70,7 @@ You can also run a specific external command by attaching a name parameter:
 $ cutler exec hostname  # this runs the hostname command
 ```
 
-## Flagging Commands
+## Execution Modes & Flagging
 
 You can flag certain commands to only run when a particular flag is passed through either `apply` or `exec`. Say, if you want to flag a Hello World command:
 
@@ -80,17 +80,19 @@ run = "echo 'Hello World'"
 flag = true
 ```
 
-Now that this command is flagged, it will only run if you pass the `--all-exec` or `--flagged` flag with `cutler apply`:
+Now that this command is flagged, it will only run if you pass one of these flags:
+
+- `--all-cmd`/`-a`: Runs all declared commands.
+- `--flagged-cmd`/`-f`: Runs flagged commands only.
 
 ```sh
-$ cutler apply --all-exec  # or -a, for all commands
-$ cutler apply --flagged  # or -f, when you only want to run flagged commands
+$ cutler apply --all-cmd  # or -a
+$ cutler apply --flagged-cmd  # or -f
 ```
 
-An identical approach can be used for `cutler exec`, however, for this command, the external commands will be executed in `All` mode,
-which means you can either choose to run regular commands only, or flagged commands.
+Same goes for `cutler exec` since it also, by default, executes your commands in "regular" mode:
 
 ```sh
-$ cutler exec --regular  # or -r
+$ cutler exec --all  # or -r
 $ cutler exec --flagged  # or -f
 ```
