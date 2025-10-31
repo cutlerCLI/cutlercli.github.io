@@ -5,7 +5,7 @@
 # Installation
 
 - [Installation Methods](./installation/installation-methods.md)
-- [Shell Integration](./installation/shell-integration.md)
+- [Shell Integrations](./installation/shell-integrations.md)
 
 # Usage
 

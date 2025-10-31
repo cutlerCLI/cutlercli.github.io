@@ -1,6 +1,6 @@
 [tasks.serve]
 description = "Serves the book locally"
-run = "cd book && mdbook serve --open"
+run = "mdbook serve book --open"
 
 [tools]
 mdbook = "latest"
