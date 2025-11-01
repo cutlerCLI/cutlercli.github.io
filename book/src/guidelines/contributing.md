@@ -46,6 +46,8 @@ CI/CD for cutler is done using [GitHub Actions](https://docs.github.com/en/actio
 - Release: [.github/workflows/release.yml](https://github.com/cutlerCLI/cutler/blob/master/.github/workflows/release.yml)
 - Unit tests: [.github/workflows/tests.yml](https://github.com/cutlerCLI/cutler/blob/master/.github/workflows/tests.yml)
 
+> The release workflow sets `MACOSX_DEPLOYMENT_TARGET` to `11.0`, meaning all general distributions of cutler will be compatible with **macOS Big Sur (11.0) or later versions**. You may change this according to your own needs in the workflow file as cutler is largely version-agnostic.
+
 > The unit tests in the CI workflow are done using an **Apple Silicon M1 (3-core)** runner provided by GitHub Actions. See [this page](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources) in GitHub's documentation for more information on all the runners. If the runners used in this project get outdated and don't get a bump, you may suggest one through [GitHub Issues](https://github.com/cutlerCLI/cutler/issues/new).
 
 ### Build Reproduction
