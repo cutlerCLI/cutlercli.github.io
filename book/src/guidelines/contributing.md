@@ -99,7 +99,3 @@ Possible types include:
 - refactor: Code refactoring without changing functionality
 - test: Test-related changes
 - chore: Maintenance or boring tasks
-
-## Licensing
-
-The primary repository and source code ([cutlerCLI/cutler](https://github.com/cutlerCLI/cutler)) is licensed under the [Apache-2.0](https://github.com/cutlerCLI/cutler/blob/master/LICENSE.md) license.
